@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Routine App</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #ffffff;
+      --highlight: #9b59b6;
+      --subtle: #aaa;
+      --active: #9b59b6;
+      --inactive: #333;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    
+
+    header {
+      text-align: center;
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: #1c1c1c;
+      border-bottom: 1px solid #333;
+    }
+
+    .day-tabs {
+      display: flex;
+      justify-content: space-around;
+      background-color: #1c1c1c;
+      padding: 0.5rem 0;
+    }
+
+    .day-tabs button {
+      background: none;
+      border: none;
+      color: var(--subtle);
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    .day-tabs button.active {
+      color: var(--active);
+      border-bottom: 2px solid var(--active);
+    }
+
+    .routine-card {
+      background-color: var(--card);
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .routine-card h2 {
+      color: var(--highlight);
+      margin: 0 0 0.5rem;
+    }
+
+    .info {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .info span {
+      display: block;
+      color: var(--subtle);
+    }
+
+    .footer-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background: #1c1c1c;
+      border-top: 1px solid #333;
+      padding: 0.5rem 0;
+    }
+    .scroll-header {
+      width: 100%;
+      background-color: #1c1c1c;
+      border-bottom: 1px solid #333;
+      overflow: hidden;
+      position: relative;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .scroll-header span {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+      color: var(--highlight);
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding-left: 100%;
+    }
+
+    .day-content {
+  padding-bottom: 4rem; /* Adds space at the bottom of each day's content */
+}
+    .footer-nav div {
+      color: var(--subtle);
+      font-size: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .stylee{
+        margin: 15px;
+    }
+
+    .day-content { display: none; }
+    .day-content.active { display: block; }
+  </style>
+</head>
+<body>
+    <div  class="stylee">
+        <marquee behavior="" direction=""><span>📅 Class Routine RC Accounting  3rd Year Anika Saba Hasan📅</span></marquee> 
+      </div>
+
+  <div class="day-tabs">
+    <button class="active" onclick="showDay('sun')">Sun</button>
+    <button onclick="showDay('mon')">Mon</button>
+    <button onclick="showDay('tue')">Tue</button>
+    <button onclick="showDay('thu')">Thu</button>
+  </div>
+
+  <!-- Sunday -->
+  <div id="sun" class="day-content active">
+    <div class="routine-card">
+      <h2>Audit and Assurance</h2>
+      <div class="info">
+        <span>Time: 9:20 - 10:10</span>
+        <span>Room: 404</span>
+        <span>Teacher: MD. Torikul Islam</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Cost Accounting</h2>
+      <div class="info">
+        <span>Time: 10:10 - 11:00</span>
+        <span>Room: 404</span>
+        <span>Teacher: Anutosh Kumar PK.</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Financial Management</h2>
+      <div class="info">
+        <span>Time: 11:00 - 11:50</span>
+        <span>Room: 404</span>
+        <span>Teacher: MD. Antaz Ali</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monday -->
+  <div id="mon" class="day-content">
+    <div class="routine-card">
+      <h2>Management Accounting</h2>
+      <div class="info">
+        <span>Time: 10:10 - 11:00</span>
+        <span>Room: 404</span>
+        <span>Teacher: MD. Torikul Islam</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Entrepreneurship</h2>
+      <div class="info">
+        <span>Time: 11:00 - 11:50</span>
+        <span>Room: 404</span>
+        <span>Teacher: Sifatun Nahar Saiki</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tuesday -->
+  <div id="tue" class="day-content">
+    <div class="routine-card">
+      <h2>Cost Accounting</h2>
+      <div class="info">
+        <span>Time: 9:20 - 10:10</span>
+        <span>Room: 302</span>
+        <span>Teacher: Anutosh Kumar PK.</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Financial Management</h2>
+      <div class="info">
+        <span>Time: 10:10 - 11:00</span>
+        <span>Room: 404</span>
+        <span>Teacher: MD. Antaz Ali</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Advance Accounting</h2>
+      <div class="info">
+        <span>Time: 11:00 - 11:50</span>
+        <span>Room: 404</span>
+        <span>Teacher: Abu MD. Faisur</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Commercial Law</h2>
+      <div class="info">
+        <span>Time: 11:50 - 12:40</span>
+        <span>Room: 404</span>
+        <span>Teacher: Abul Hasnat</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thursday -->
+  <div id="thu" class="day-content">
+    <div class="routine-card">
+      <h2>Banking And Insurance</h2>
+      <div class="info">
+        <span>Time: 9:20 - 10:10</span>
+        <span>Room: 404</span>
+        <span>Teacher: MD. Torikul Islam</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Advantage Accounting</h2>
+      <div class="info">
+        <span>Time: 10:10 - 11:00</span>
+        <span>Room: 404</span>
+        <span>Teacher: Abu MD. Faisur</span>
+      </div>
+    </div>
+    <div class="routine-card">
+      <h2>Management Accounting</h2>
+      <div class="info">
+        <span>Time: 11:50 - 12:40</span>
+        <span>Room: 301</span>
+        <span>Teacher: MD. Momotaz Uddin Molla</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <div>
+      <span>👤</span>
+      Student
+    </div>
+
+  </div>
+  
+
+  <script>
+    function showDay(dayId) {
+      document.querySelectorAll('.day-content').forEach(div => div.classList.remove('active'));
+      document.getElementById(dayId).classList.add('active');
+
+      document.querySelectorAll('.day-tabs button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
