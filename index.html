@@ -109,7 +109,7 @@
       padding-left: 100%;
     }
 
-    .day-content {
+.day-content {
   padding-bottom: 4rem; /* Adds space at the bottom of each day's content */
 }
     .footer-nav div {
@@ -132,11 +132,44 @@
         <marquee behavior="" direction=""><span>📅 Class Routine RC Accounting  3rd Year Anika Saba Hasan📅</span></marquee> 
       </div>
 
-  <div class="day-tabs">
-    <button class="active" onclick="showDay('sun')">Sun</button>
-    <button onclick="showDay('mon')">Mon</button>
-    <button onclick="showDay('tue')">Tue</button>
-    <button onclick="showDay('thu')">Thu</button>
+      <div class="day-tabs">
+        <button class="active" onclick="showDay('sun')">Sun</button>
+        <button onclick="showDay('mon')">Mon</button>
+        <button onclick="showDay('tue')">Tue</button>
+        <button onclick="showDay('wed')">Wed</button>
+        <button onclick="showDay('thu')">Thu</button>
+        <button onclick="showDay('fri')">Fri</button>
+        <button onclick="showDay('sat')">Sat</button>
+      </div>
+      
+<!-- Saturday -->
+<div id="sat" class="day-content">
+    <div class="routine-card">
+      <h2>No Classes Today</h2>
+      <div class="info">
+        <span>Ghumao! 🎉</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wednesday -->
+<div id="wed" class="day-content">
+    <div class="routine-card">
+      <h2>No Classes Today</h2>
+      <div class="info">
+        <span>Ghumao! 🎉</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Friday -->
+  <div id="fri" class="day-content">
+    <div class="routine-card">
+      <h2>No Classes Today</h2>
+      <div class="info">
+        <span>Ghumao! 🎉</span>
+      </div>
+    </div>
   </div>
 
   <!-- Sunday -->
@@ -258,7 +291,6 @@
     </div>
 
   </div>
-  
 
   <script>
     function showDay(dayId) {
